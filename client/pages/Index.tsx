@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
-import { Mail, Github, Linkedin, ArrowRight } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 

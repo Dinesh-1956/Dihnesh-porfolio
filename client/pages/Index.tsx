@@ -149,7 +149,7 @@ export default function Index() {
                   <p className="text-xs font-semibold text-slate-500 tracking-widest uppercase">
                     Electronics & VLSI Engineer
                   </p>
-                  <h1 className="font-light tracking-tight text-3xl sm:text-5xl lg:text-7xl text-slate-900 leading-tight">
+                  <h1 className="font-light tracking-tight text-3xl sm:text-5xl lg:text-7xl text-slate-900 leading-tight animate-float">
                     V.
                     <br />
                     Dinesh

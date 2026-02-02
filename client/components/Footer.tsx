@@ -13,14 +13,20 @@ export default function Footer() {
 
           {/* Location */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-2">Location</h3>
+            <h3 className="text-sm font-semibold text-gray-900 mb-2">
+              Location
+            </h3>
             <p className="text-gray-600 text-sm">Hyderabad, Telangana, India</p>
           </div>
 
           {/* Expertise */}
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-2">Expertise</h3>
-            <p className="text-gray-600 text-sm">Digital Electronics, VLSI, Hardware Design</p>
+            <h3 className="text-sm font-semibold text-gray-900 mb-2">
+              Expertise
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Digital Electronics, VLSI, Hardware Design
+            </p>
           </div>
 
           {/* Copyright */}

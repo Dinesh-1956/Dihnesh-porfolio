@@ -3,7 +3,6 @@ import Layout from "@/components/Layout";
 import { Mail, Github, Linkedin } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
-
 interface ParallaxProps {
   children: React.ReactNode;
   offset?: number;
@@ -29,7 +28,10 @@ const Parallax = ({ children, offset = 0 }: ParallaxProps) => {
   }, []);
 
   return (
-    <div ref={ref} style={{ transform: `translateY(${translateY * offset}px)` }}>
+    <div
+      ref={ref}
+      style={{ transform: `translateY(${translateY * offset}px)` }}
+    >
       {children}
     </div>
   );
@@ -42,7 +44,12 @@ interface ScrollRevealProps {
   scale?: boolean;
 }
 
-const ScrollReveal = ({ children, delay = 0, direction = "up", scale = false }: ScrollRevealProps) => {
+const ScrollReveal = ({
+  children,
+  delay = 0,
+  direction = "up",
+  scale = false,
+}: ScrollRevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -54,7 +61,7 @@ const ScrollReveal = ({ children, delay = 0, direction = "up", scale = false }: 
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -111,7 +118,9 @@ export default function Index() {
             <Parallax offset={0.4}>
               <div
                 className={`flex justify-center lg:justify-start transition-all duration-1200 ${
-                  isHeroVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
+                  isHeroVisible
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 -translate-x-20"
                 }`}
               >
                 <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
@@ -130,7 +139,9 @@ export default function Index() {
             {/* Right: Hero Content */}
             <div
               className={`flex flex-col justify-center transition-all duration-1200 delay-300 ${
-                isHeroVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
+                isHeroVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-20"
               }`}
             >
               <div className="space-y-6 lg:space-y-8">
@@ -139,7 +150,9 @@ export default function Index() {
                     Electronics & VLSI Engineer
                   </p>
                   <h1 className="font-light tracking-tight text-4xl sm:text-5xl lg:text-7xl text-slate-900 leading-tight">
-                    V.<br />Dinesh
+                    V.
+                    <br />
+                    Dinesh
                   </h1>
                 </div>
 
@@ -148,7 +161,8 @@ export default function Index() {
                     Digital Electronics • VLSI • Hardware Design
                   </p>
                   <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-light max-w-lg">
-                    Passionate about designing innovative electronics solutions with a focus on VLSI and embedded systems.
+                    Passionate about designing innovative electronics solutions
+                    with a focus on VLSI and embedded systems.
                   </p>
                 </div>
 
@@ -157,21 +171,21 @@ export default function Index() {
                   <Link
                     to="/resume"
                     className="w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center font-light text-xs sm:text-sm text-gray-900 hover:shadow-2xl transition-all duration-500 hover:scale-110 hover:-translate-y-2 active:scale-95"
-                    style={{ backgroundColor: '#FFC107' }}
+                    style={{ backgroundColor: "#FFC107" }}
                   >
                     Resume
                   </Link>
                   <Link
                     to="/projects"
                     className="w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center font-light text-xs sm:text-sm text-white hover:shadow-2xl transition-all duration-500 hover:scale-110 hover:-translate-y-2 active:scale-95"
-                    style={{ backgroundColor: '#FF5252' }}
+                    style={{ backgroundColor: "#FF5252" }}
                   >
                     Projects
                   </Link>
                   <Link
                     to="/contact"
                     className="w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center font-light text-xs sm:text-sm text-gray-900 hover:shadow-2xl transition-all duration-500 hover:scale-110 hover:-translate-y-2 active:scale-95"
-                    style={{ backgroundColor: '#4DD0E1' }}
+                    style={{ backgroundColor: "#4DD0E1" }}
                   >
                     Contact
                   </Link>
@@ -222,16 +236,26 @@ export default function Index() {
           <ScrollReveal direction="up" delay={150}>
             <div className="mt-16 space-y-6 max-w-3xl">
               <p className="text-lg text-slate-700 leading-relaxed font-light">
-                I'm an Electronics and Communication Engineering student with strong academic foundation and practical exposure to hardware systems, digital electronics, and VLSI concepts. My focus is on designing innovative electronics solutions that solve real-world problems.
+                I'm an Electronics and Communication Engineering student with
+                strong academic foundation and practical exposure to hardware
+                systems, digital electronics, and VLSI concepts. My focus is on
+                designing innovative electronics solutions that solve real-world
+                problems.
               </p>
               <p className="text-lg text-slate-700 leading-relaxed font-light">
-                I have hands-on experience with circuit design, microcontroller programming, and hardware implementation. My internship at Sushanth Engineers provided me with industry-grade exposure to professional workflows and hardware-level problem solving.
+                I have hands-on experience with circuit design, microcontroller
+                programming, and hardware implementation. My internship at
+                Sushanth Engineers provided me with industry-grade exposure to
+                professional workflows and hardware-level problem solving.
               </p>
               <p className="text-lg text-slate-700 leading-relaxed font-light">
-                My passion lies in developing systems where both hardware and software engineering matter—from smart temperature regulation to anti-theft security systems.
+                My passion lies in developing systems where both hardware and
+                software engineering matter—from smart temperature regulation to
+                anti-theft security systems.
               </p>
               <p className="text-base text-slate-600 pt-6 font-light">
-                B.Tech in Electronics & Communication Engineering (2023-27, CGPA: 7.2) • Hyderabad, Telangana
+                B.Tech in Electronics & Communication Engineering (2023-27,
+                CGPA: 7.2) • Hyderabad, Telangana
               </p>
             </div>
           </ScrollReveal>
@@ -258,22 +282,47 @@ export default function Index() {
             {[
               {
                 category: "Programming",
-                items: ["Python", "Basic C Programming", "Problem Solving", "Embedded Systems"],
+                items: [
+                  "Python",
+                  "Basic C Programming",
+                  "Problem Solving",
+                  "Embedded Systems",
+                ],
               },
               {
                 category: "Core Electronics",
-                items: ["Digital Electronics", "VLSI Concepts", "Circuit Design & Testing", "Microcontrollers"],
+                items: [
+                  "Digital Electronics",
+                  "VLSI Concepts",
+                  "Circuit Design & Testing",
+                  "Microcontrollers",
+                ],
               },
               {
                 category: "Hardware",
-                items: ["Sensors", "Hardware Implementation", "PCB Design Basics", "Signal Processing"],
+                items: [
+                  "Sensors",
+                  "Hardware Implementation",
+                  "PCB Design Basics",
+                  "Signal Processing",
+                ],
               },
               {
                 category: "Soft Skills",
-                items: ["Team Collaboration", "Team Leadership", "Communication", "Adaptability"],
+                items: [
+                  "Team Collaboration",
+                  "Team Leadership",
+                  "Communication",
+                  "Adaptability",
+                ],
               },
             ].map((skill, index) => (
-              <ScrollReveal key={index} direction="up" delay={index * 120} scale>
+              <ScrollReveal
+                key={index}
+                direction="up"
+                delay={index * 120}
+                scale
+              >
                 <div className="group p-8 lg:p-12 bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-500 hover:translate-y-[-4px]">
                   <h3 className="text-xl font-light text-slate-900 mb-8 tracking-tight">
                     {skill.category}
@@ -284,7 +333,7 @@ export default function Index() {
                         key={i}
                         className="flex items-center gap-4 text-slate-700 font-light text-base group-hover:text-slate-900 transition-colors duration-300"
                         style={{
-                          transitionDelay: `${i * 50}ms`
+                          transitionDelay: `${i * 50}ms`,
                         }}
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-slate-400 group-hover:bg-slate-900 transition-colors duration-300" />
@@ -313,7 +362,8 @@ export default function Index() {
                 Get in touch
               </h2>
               <p className="text-lg text-slate-600 mt-6 font-light max-w-2xl">
-                Always open to collaborations and opportunities in electronics and VLSI. Reach out to connect!
+                Always open to collaborations and opportunities in electronics
+                and VLSI. Reach out to connect!
               </p>
             </div>
           </ScrollReveal>
@@ -339,7 +389,12 @@ export default function Index() {
                 link: "https://linkedin.com",
               },
             ].map((contact, index) => (
-              <ScrollReveal key={index} direction="up" delay={index * 120} scale>
+              <ScrollReveal
+                key={index}
+                direction="up"
+                delay={index * 120}
+                scale
+              >
                 <a
                   href={contact.link}
                   target={contact.label !== "Email" ? "_blank" : undefined}
@@ -352,7 +407,9 @@ export default function Index() {
                   <h3 className="text-lg font-light text-slate-900 mb-3 tracking-tight">
                     {contact.label}
                   </h3>
-                  <p className="text-slate-700 font-light text-base group-hover:text-slate-900 transition-colors duration-300">{contact.value}</p>
+                  <p className="text-slate-700 font-light text-base group-hover:text-slate-900 transition-colors duration-300">
+                    {contact.value}
+                  </p>
                 </a>
               </ScrollReveal>
             ))}

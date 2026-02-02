@@ -327,10 +327,10 @@ export default function Index() {
                 Work
               </p>
               <h2 className="font-light text-5xl sm:text-6xl lg:text-7xl text-slate-900 leading-tight tracking-tight">
-                Featured projects
+                Key projects & experience
               </h2>
               <p className="text-lg text-slate-600 mt-6 font-light">
-                Building scalable systems from the ground up
+                Designing innovative electronics solutions with real-world impact
               </p>
             </div>
           </ScrollReveal>

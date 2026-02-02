@@ -5,28 +5,19 @@ import { useState, useEffect, useRef } from "react";
 
 const projects = [
   {
-    title: "MeritOne — Skill Exchange Platform",
-    tech: "MERN Stack",
-    description: "Built a skill-based collaboration platform enabling users to exchange services instead of money. Implemented user profiles, matching logic, and skill validation.",
-    link: "https://meritone-sandy.vercel.app/",
-    isLive: true,
+    title: "Breeze and Blaze — Smart Temperature-Regulated Blanket",
+    tech: "Hardware Design, Microcontrollers",
+    description: "Designed a smart temperature-controlled blanket with automatic regulation without manual intervention. Emphasizes safety and energy efficiency with applications in homes, healthcare, and travel environments.",
   },
   {
-    title: "Interpret — AI Communication Coaching",
-    tech: "MERN + AI Agents",
-    description: "AI-driven platform analyzing communication across explanations, debates, and discussions. Generates structured feedback and actionable improvement suggestions.",
-    link: "https://main.d2xij8sofghk6m.amplifyapp.com/",
-    isLive: true,
+    title: "Anti-Theft System for Two-Wheelers",
+    tech: "Electronics, Embedded Systems",
+    description: "Developed an electronics-based security solution to mitigate two-wheeler theft. Features owner authentication, remote control, and integrated vehicle tracking for recovery during theft or accident scenarios.",
   },
   {
-    title: "Automated Content Pipeline",
-    tech: "Node.js, AI Agents",
-    description: "End-to-end automated system for generating scripts, creating audio/visuals, and publishing content. Modular workflow with emphasis on clean architecture.",
-  },
-  {
-    title: "Movella — Story Adaptation System",
-    tech: "System Design, AI",
-    description: "System design for converting books into cinematic-style narrated experiences. Defined architecture for story parsing and visual alignment.",
+    title: "Sushanth Engineers Internship",
+    tech: "Hardware Implementation",
+    description: "6-month hands-on hardware implementation and circuit design experience. Worked on diagnosing and resolving hardware-level issues in industry-grade electronic systems.",
   },
 ];
 

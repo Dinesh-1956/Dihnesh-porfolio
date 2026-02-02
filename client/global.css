@@ -176,11 +176,31 @@
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+  0% {
+    transform: translateY(0px) translateX(0px) rotateZ(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) translateX(3px) rotateZ(0.5deg) scale(1.01);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px) translateX(0px) rotateZ(0deg) scale(1.02);
+  }
+  75% {
+    transform: translateY(-12px) translateX(-4px) rotateZ(-0.5deg) scale(1.01);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotateZ(0deg) scale(1);
+  }
+}
+
+@keyframes floatAlt {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-25px) scale(1.02);
+    opacity: 0.98;
   }
 }
 

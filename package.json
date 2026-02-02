@@ -21,6 +21,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "browserslist": "^4.28.1",
+    "caniuse-lite": "^1.0.30001767",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "zod": "^3.25.76"

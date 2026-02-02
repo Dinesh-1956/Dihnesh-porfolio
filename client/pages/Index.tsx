@@ -1,34 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
-import { Mail, Github, Linkedin, ArrowRight } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-
-const projects = [
-  {
-    title: "MeritOne — Skill Exchange Platform",
-    tech: "MERN Stack",
-    description: "Built a skill-based collaboration platform enabling users to exchange services instead of money. Implemented user profiles, matching logic, and skill validation.",
-    link: "https://meritone-sandy.vercel.app/",
-    isLive: true,
-  },
-  {
-    title: "Interpret — AI Communication Coaching",
-    tech: "MERN + AI Agents",
-    description: "AI-driven platform analyzing communication across explanations, debates, and discussions. Generates structured feedback and actionable improvement suggestions.",
-    link: "https://main.d2xij8sofghk6m.amplifyapp.com/",
-    isLive: true,
-  },
-  {
-    title: "Automated Content Pipeline",
-    tech: "Node.js, AI Agents",
-    description: "End-to-end automated system for generating scripts, creating audio/visuals, and publishing content. Modular workflow with emphasis on clean architecture.",
-  },
-  {
-    title: "Movella — Story Adaptation System",
-    tech: "System Design, AI",
-    description: "System design for converting books into cinematic-style narrated experiences. Defined architecture for story parsing and visual alignment.",
-  },
-];
 
 interface ParallaxProps {
   children: React.ReactNode;
@@ -55,7 +28,10 @@ const Parallax = ({ children, offset = 0 }: ParallaxProps) => {
   }, []);
 
   return (
-    <div ref={ref} style={{ transform: `translateY(${translateY * offset}px)` }}>
+    <div
+      ref={ref}
+      style={{ transform: `translateY(${translateY * offset}px)` }}
+    >
       {children}
     </div>
   );
@@ -68,7 +44,12 @@ interface ScrollRevealProps {
   scale?: boolean;
 }
 
-const ScrollReveal = ({ children, delay = 0, direction = "up", scale = false }: ScrollRevealProps) => {
+const ScrollReveal = ({
+  children,
+  delay = 0,
+  direction = "up",
+  scale = false,
+}: ScrollRevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -80,7 +61,7 @@ const ScrollReveal = ({ children, delay = 0, direction = "up", scale = false }: 
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -137,15 +118,17 @@ export default function Index() {
             <Parallax offset={0.4}>
               <div
                 className={`flex justify-center lg:justify-start transition-all duration-1200 ${
-                  isHeroVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
+                  isHeroVisible
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 -translate-x-20"
                 }`}
               >
                 <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 blur-2xl opacity-50" />
                   <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border border-white/50">
                     <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F53e4fd32dd724f51a2e513f718e61215%2F54c33f5a4c584ef790818afca0c399bb?format=webp&width=800&height=1200"
-                      alt="Mohammed Shahzaman Ali"
+                      src="https://cdn.builder.io/api/v1/image/assets%2Ff11b34f0fc244da89705edac23c5f473%2Fb83664de3c4c483daf04a715fb1cd657?format=webp&width=800&height=1200"
+                      alt="V. Dinesh"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -156,25 +139,30 @@ export default function Index() {
             {/* Right: Hero Content */}
             <div
               className={`flex flex-col justify-center transition-all duration-1200 delay-300 ${
-                isHeroVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
+                isHeroVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-20"
               }`}
             >
               <div className="space-y-6 lg:space-y-8">
                 <div className="space-y-4 lg:space-y-6">
                   <p className="text-xs font-semibold text-slate-500 tracking-widest uppercase">
-                    Full-Stack Developer
+                    Electronics & VLSI Engineer
                   </p>
                   <h1 className="font-light tracking-tight text-4xl sm:text-5xl lg:text-7xl text-slate-900 leading-tight">
-                    Mohammed<br />Shahzaman<br />Ali
+                    V.
+                    <br />
+                    Dinesh
                   </h1>
                 </div>
 
                 <div className="space-y-4 lg:space-y-6">
                   <p className="text-sm sm:text-base text-slate-700 tracking-wide">
-                    MERN Stack • AI Agents • Automation
+                    Digital Electronics • VLSI • Hardware Design
                   </p>
                   <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-light max-w-lg">
-                    I build full-stack systems that solve real problems, not demo apps.
+                    Passionate about designing innovative electronics solutions
+                    with a focus on VLSI and embedded systems.
                   </p>
                 </div>
 
@@ -183,21 +171,21 @@ export default function Index() {
                   <Link
                     to="/resume"
                     className="w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center font-light text-xs sm:text-sm text-gray-900 hover:shadow-2xl transition-all duration-500 hover:scale-110 hover:-translate-y-2 active:scale-95"
-                    style={{ backgroundColor: '#FFC107' }}
+                    style={{ backgroundColor: "#FFC107" }}
                   >
                     Resume
                   </Link>
                   <Link
                     to="/projects"
                     className="w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center font-light text-xs sm:text-sm text-white hover:shadow-2xl transition-all duration-500 hover:scale-110 hover:-translate-y-2 active:scale-95"
-                    style={{ backgroundColor: '#FF5252' }}
+                    style={{ backgroundColor: "#FF5252" }}
                   >
                     Projects
                   </Link>
                   <Link
                     to="/contact"
                     className="w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center font-light text-xs sm:text-sm text-gray-900 hover:shadow-2xl transition-all duration-500 hover:scale-110 hover:-translate-y-2 active:scale-95"
-                    style={{ backgroundColor: '#4DD0E1' }}
+                    style={{ backgroundColor: "#4DD0E1" }}
                   >
                     Contact
                   </Link>
@@ -240,7 +228,7 @@ export default function Index() {
                 </p>
               </div>
               <h2 className="font-light text-5xl sm:text-6xl lg:text-7xl text-slate-900 leading-tight tracking-tight">
-                Innovative Full Stack Developer
+                Electronics & VLSI Enthusiast
               </h2>
             </div>
           </ScrollReveal>
@@ -248,16 +236,26 @@ export default function Index() {
           <ScrollReveal direction="up" delay={150}>
             <div className="mt-16 space-y-6 max-w-3xl">
               <p className="text-lg text-slate-700 leading-relaxed font-light">
-                My work spans the MERN stack, AI agents, and automation pipelines—focused on turning ideas into production-ready software. I design systems with scalability, security, and real-world constraints in mind.
+                I'm an Electronics and Communication Engineering student with
+                strong academic foundation and practical exposure to hardware
+                systems, digital electronics, and VLSI concepts. My focus is on
+                designing innovative electronics solutions that solve real-world
+                problems.
               </p>
               <p className="text-lg text-slate-700 leading-relaxed font-light">
-                I enjoy working on problems where architecture matters: integrating AI into workflows, building end-to-end platforms, and designing systems that continue to work as usage grows.
+                I have hands-on experience with circuit design, microcontroller
+                programming, and hardware implementation. My internship at
+                Sushanth Engineers provided me with industry-grade exposure to
+                professional workflows and hardware-level problem solving.
               </p>
               <p className="text-lg text-slate-700 leading-relaxed font-light">
-                My goal is simple: build software that actually gets used.
+                My passion lies in developing systems where both hardware and
+                software engineering matter—from smart temperature regulation to
+                anti-theft security systems.
               </p>
               <p className="text-base text-slate-600 pt-6 font-light">
-                B.Tech in Electronics & Communication Engineering (2023-27)
+                B.Tech in Electronics & Communication Engineering (2023-27,
+                CGPA: 7.2) • Hyderabad, Telangana
               </p>
             </div>
           </ScrollReveal>
@@ -283,23 +281,48 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-20">
             {[
               {
-                category: "Frontend",
-                items: ["React.js", "HTML / CSS / JavaScript", "Responsive Design", "Performance Optimization"],
+                category: "Programming",
+                items: [
+                  "Python",
+                  "Basic C Programming",
+                  "Problem Solving",
+                  "Embedded Systems",
+                ],
               },
               {
-                category: "Backend",
-                items: ["Node.js", "Express.js", "REST APIs", "System Architecture"],
+                category: "Core Electronics",
+                items: [
+                  "Digital Electronics",
+                  "VLSI Concepts",
+                  "Circuit Design & Testing",
+                  "Microcontrollers",
+                ],
               },
               {
-                category: "Database",
-                items: ["MongoDB", "Data Modeling", "Query Optimization", "Indexing Strategies"],
+                category: "Hardware",
+                items: [
+                  "Sensors",
+                  "Hardware Implementation",
+                  "PCB Design Basics",
+                  "Signal Processing",
+                ],
               },
               {
-                category: "AI & DevOps",
-                items: ["LLM-based Agents", "Prompt Engineering", "Git / Docker", "Linux"],
+                category: "Soft Skills",
+                items: [
+                  "Team Collaboration",
+                  "Team Leadership",
+                  "Communication",
+                  "Adaptability",
+                ],
               },
             ].map((skill, index) => (
-              <ScrollReveal key={index} direction="up" delay={index * 120} scale>
+              <ScrollReveal
+                key={index}
+                direction="up"
+                delay={index * 120}
+                scale
+              >
                 <div className="group p-8 lg:p-12 bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-500 hover:translate-y-[-4px]">
                   <h3 className="text-xl font-light text-slate-900 mb-8 tracking-tight">
                     {skill.category}
@@ -310,7 +333,7 @@ export default function Index() {
                         key={i}
                         className="flex items-center gap-4 text-slate-700 font-light text-base group-hover:text-slate-900 transition-colors duration-300"
                         style={{
-                          transitionDelay: `${i * 50}ms`
+                          transitionDelay: `${i * 50}ms`,
                         }}
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-slate-400 group-hover:bg-slate-900 transition-colors duration-300" />
@@ -319,94 +342,6 @@ export default function Index() {
                     ))}
                   </ul>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section className="py-32 lg:py-48 bg-white relative overflow-hidden">
-        <div className="absolute -bottom-40 right-0 w-80 h-80 bg-slate-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
-
-        <div className="max-w-5xl mx-auto px-6 relative z-10">
-          <ScrollReveal direction="up" delay={0}>
-            <div className="space-y-4">
-              <p className="text-xs font-semibold text-slate-500 tracking-widest uppercase">
-                Work
-              </p>
-              <h2 className="font-light text-5xl sm:text-6xl lg:text-7xl text-slate-900 leading-tight tracking-tight">
-                Featured projects
-              </h2>
-              <p className="text-lg text-slate-600 mt-6 font-light">
-                Building scalable systems from the ground up
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mt-20">
-            {projects.map((project, index) => (
-              <ScrollReveal key={index} direction="up" delay={index * 140} scale>
-                {project.isLive ? (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative h-full bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-slate-300 hover:shadow-lg transition-all duration-500 hover:translate-y-[-4px] block"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="p-8 lg:p-10 h-full flex flex-col justify-between relative z-10">
-                      <div>
-                        <div className="flex items-start justify-between mb-6">
-                          <div className="flex-1">
-                            <h3 className="text-xl font-light text-slate-900 tracking-tight leading-tight">
-                              {project.title}
-                            </h3>
-                            <span className="inline-block text-xs font-semibold text-emerald-600 mt-2 px-2 py-1 rounded bg-emerald-50">
-                              LIVE
-                            </span>
-                          </div>
-                          <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-slate-900 transition-all duration-500 flex-shrink-0 group-hover:translate-x-2 group-hover:-translate-y-1" />
-                        </div>
-
-                        <span className="inline-block text-xs font-light px-3 py-2 rounded-lg bg-slate-100 text-slate-700 mb-6 tracking-wide group-hover:bg-slate-200 transition-colors duration-300">
-                          {project.tech}
-                        </span>
-
-                        <p className="text-slate-700 leading-relaxed text-base font-light group-hover:text-slate-900 transition-colors duration-300">
-                          {project.description}
-                        </p>
-                      </div>
-                      <div className="mt-6 pt-6 border-t border-slate-200 group-hover:border-slate-300 transition-colors duration-300">
-                        <span className="inline-flex items-center gap-2 text-sm font-light text-slate-600 group-hover:text-slate-900 transition-colors duration-300">
-                          Visit site <ArrowRight className="w-4 h-4" />
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                ) : (
-                  <div className="group relative h-full bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-slate-300 hover:shadow-lg transition-all duration-500 hover:translate-y-[-4px]">
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="p-8 lg:p-10 h-full flex flex-col justify-between relative z-10">
-                      <div>
-                        <div className="flex items-start justify-between mb-6">
-                          <h3 className="text-xl font-light text-slate-900 flex-1 tracking-tight leading-tight">
-                            {project.title}
-                          </h3>
-                          <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-slate-900 transition-all duration-500 flex-shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                        </div>
-
-                        <span className="inline-block text-xs font-light px-3 py-2 rounded-lg bg-slate-100 text-slate-700 mb-6 tracking-wide group-hover:bg-slate-200 transition-colors duration-300">
-                          {project.tech}
-                        </span>
-
-                        <p className="text-slate-700 leading-relaxed text-base font-light group-hover:text-slate-900 transition-colors duration-300">
-                          {project.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </ScrollReveal>
             ))}
           </div>
@@ -424,10 +359,11 @@ export default function Index() {
                 Connect
               </p>
               <h2 className="font-light text-5xl sm:text-6xl lg:text-7xl text-slate-900 leading-tight tracking-tight">
-                Let's work together
+                Get in touch
               </h2>
               <p className="text-lg text-slate-600 mt-6 font-light max-w-2xl">
-                Always open to meaningful projects and collaborations. Typically respond within 24–48 hours.
+                Always open to collaborations and opportunities in electronics
+                and VLSI. Reach out to connect!
               </p>
             </div>
           </ScrollReveal>
@@ -437,8 +373,8 @@ export default function Index() {
               {
                 icon: Mail,
                 label: "Email",
-                value: "contact@mohammedshahzaman.dev",
-                link: "mailto:contact@mohammedshahzaman.dev",
+                value: "dineshnani5691@email.com",
+                link: "mailto:dineshnani5691@email.com",
               },
               {
                 icon: Github,
@@ -453,7 +389,12 @@ export default function Index() {
                 link: "https://linkedin.com",
               },
             ].map((contact, index) => (
-              <ScrollReveal key={index} direction="up" delay={index * 120} scale>
+              <ScrollReveal
+                key={index}
+                direction="up"
+                delay={index * 120}
+                scale
+              >
                 <a
                   href={contact.link}
                   target={contact.label !== "Email" ? "_blank" : undefined}
@@ -466,7 +407,9 @@ export default function Index() {
                   <h3 className="text-lg font-light text-slate-900 mb-3 tracking-tight">
                     {contact.label}
                   </h3>
-                  <p className="text-slate-700 font-light text-base group-hover:text-slate-900 transition-colors duration-300">{contact.value}</p>
+                  <p className="text-slate-700 font-light text-base group-hover:text-slate-900 transition-colors duration-300">
+                    {contact.value}
+                  </p>
                 </a>
               </ScrollReveal>
             ))}

@@ -8,39 +8,24 @@ export default function Footer() {
           {/* Email */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 mb-2">Email</h3>
-            <p className="text-gray-600 text-sm">contact@mohammedshahzaman.dev</p>
+            <p className="text-gray-600 text-sm">dineshnani5691@email.com</p>
+          </div>
+
+          {/* Location */}
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 mb-2">Location</h3>
+            <p className="text-gray-600 text-sm">Hyderabad, Telangana, India</p>
           </div>
 
           {/* Expertise */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 mb-2">Expertise</h3>
-            <p className="text-gray-600 text-sm">MERN Stack, AI Agents, Automation</p>
-          </div>
-
-          {/* Follow Me */}
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-2">Follow Me</h3>
-            <div className="flex gap-3">
-              <a
-                href="https://github.com"
-                className="text-gray-600 hover:text-gray-900 transition"
-                aria-label="GitHub"
-              >
-                <Github size={18} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                className="text-gray-600 hover:text-gray-900 transition"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={18} />
-              </a>
-            </div>
+            <p className="text-gray-600 text-sm">Digital Electronics, VLSI, Hardware Design</p>
           </div>
 
           {/* Copyright */}
           <div className="text-right">
-            <p className="text-gray-600 text-xs mb-1">© 2026 Mohammed Shahzaman Ali</p>
+            <p className="text-gray-600 text-xs mb-1">© 2026 V. Dinesh</p>
             <p className="text-gray-500 text-xs">
               Built with <span className="font-semibold">React & Vite</span>
             </p>

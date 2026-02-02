@@ -428,8 +428,8 @@ export default function Index() {
               {
                 icon: Mail,
                 label: "Email",
-                value: "contact@mohammedshahzaman.dev",
-                link: "mailto:contact@mohammedshahzaman.dev",
+                value: "dineshnani5691@email.com",
+                link: "mailto:dineshnani5691@email.com",
               },
               {
                 icon: Github,

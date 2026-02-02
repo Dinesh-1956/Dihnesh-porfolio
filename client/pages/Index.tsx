@@ -274,20 +274,20 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-20">
             {[
               {
-                category: "Frontend",
-                items: ["React.js", "HTML / CSS / JavaScript", "Responsive Design", "Performance Optimization"],
+                category: "Programming",
+                items: ["Python", "Basic C Programming", "Problem Solving", "Embedded Systems"],
               },
               {
-                category: "Backend",
-                items: ["Node.js", "Express.js", "REST APIs", "System Architecture"],
+                category: "Core Electronics",
+                items: ["Digital Electronics", "VLSI Concepts", "Circuit Design & Testing", "Microcontrollers"],
               },
               {
-                category: "Database",
-                items: ["MongoDB", "Data Modeling", "Query Optimization", "Indexing Strategies"],
+                category: "Hardware",
+                items: ["Sensors", "Hardware Implementation", "PCB Design Basics", "Signal Processing"],
               },
               {
-                category: "AI & DevOps",
-                items: ["LLM-based Agents", "Prompt Engineering", "Git / Docker", "Linux"],
+                category: "Soft Skills",
+                items: ["Team Collaboration", "Team Leadership", "Communication", "Adaptability"],
               },
             ].map((skill, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 120} scale>

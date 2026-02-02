@@ -162,10 +162,10 @@ export default function Index() {
 
                 <div className="space-y-4 lg:space-y-6">
                   <p className="text-sm sm:text-base text-slate-700 tracking-wide">
-                    MERN Stack • AI Agents • Automation
+                    Digital Electronics • VLSI • Hardware Design
                   </p>
                   <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-light max-w-lg">
-                    I build full-stack systems that solve real problems, not demo apps.
+                    Passionate about designing innovative electronics solutions with a focus on VLSI and embedded systems.
                   </p>
                 </div>
 

@@ -3,23 +3,6 @@ import Layout from "@/components/Layout";
 import { Mail, Github, Linkedin, ArrowRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
-const projects = [
-  {
-    title: "Breeze and Blaze — Smart Temperature-Regulated Blanket",
-    tech: "Hardware Design, Microcontrollers",
-    description: "Designed a smart temperature-controlled blanket with automatic regulation without manual intervention. Emphasizes safety and energy efficiency with applications in homes, healthcare, and travel environments.",
-  },
-  {
-    title: "Anti-Theft System for Two-Wheelers",
-    tech: "Electronics, Embedded Systems",
-    description: "Developed an electronics-based security solution to mitigate two-wheeler theft. Features owner authentication, remote control, and integrated vehicle tracking for recovery during theft or accident scenarios.",
-  },
-  {
-    title: "Sushanth Engineers Internship",
-    tech: "Hardware Implementation",
-    description: "6-month hands-on hardware implementation and circuit design experience. Worked on diagnosing and resolving hardware-level issues in industry-grade electronic systems.",
-  },
-];
 
 interface ParallaxProps {
   children: React.ReactNode;

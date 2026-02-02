@@ -253,7 +253,7 @@ export default function Index() {
                 software engineering matter—from smart temperature regulation to
                 anti-theft security systems.
               </p>
-              <p className="text-base text-slate-600 pt-6 font-light">
+              <p className="text-sm sm:text-base text-slate-600 pt-4 sm:pt-6 font-light">
                 B.Tech in Electronics & Communication Engineering (2023-27,
                 CGPA: 7.2) • Hyderabad, Telangana
               </p>
@@ -394,7 +394,7 @@ export default function Index() {
                   href={contact.link}
                   target={contact.label !== "Email" ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className="group block p-8 lg:p-10 bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-500 hover:translate-y-[-4px]"
+                  className="group block p-6 sm:p-8 lg:p-10 bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-500 hover:translate-y-[-4px]"
                 >
                   <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-slate-900 text-white flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                     <contact.icon className="w-5 sm:w-6 h-5 sm:h-6" />

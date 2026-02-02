@@ -129,7 +129,7 @@ export default function Index() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Ff11b34f0fc244da89705edac23c5f473%2Fb83664de3c4c483daf04a715fb1cd657?format=webp&width=800&height=1200"
                       alt="V. Dinesh"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </div>
@@ -268,17 +268,12 @@ export default function Index() {
 
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <ScrollReveal direction="up" delay={0}>
-            <div className="inline-block mb-8">
-              <p className="text-xs font-semibold text-slate-500 tracking-widest uppercase">
-                Expertise
-              </p>
-            </div>
-            <h2 className="font-light text-5xl sm:text-6xl lg:text-7xl text-slate-900 leading-tight tracking-tight">
+            <h2 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-900 leading-tight tracking-tight">
               Technical foundation
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mt-12 sm:mt-16 lg:mt-20">
             {[
               {
                 category: "Programming",
@@ -323,8 +318,8 @@ export default function Index() {
                 delay={index * 120}
                 scale
               >
-                <div className="group p-8 lg:p-12 bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-500 hover:translate-y-[-4px]">
-                  <h3 className="text-xl font-light text-slate-900 mb-8 tracking-tight">
+                <div className="group p-6 sm:p-8 lg:p-12 bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-500 hover:translate-y-[-4px]">
+                  <h3 className="text-lg sm:text-xl font-light text-slate-900 mb-6 sm:mb-8 tracking-tight">
                     {skill.category}
                   </h3>
                   <ul className="space-y-4">
@@ -368,7 +363,7 @@ export default function Index() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16 lg:mt-20">
             {[
               {
                 icon: Mail,
@@ -401,13 +396,13 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="group block p-8 lg:p-10 bg-white rounded-2xl border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-500 hover:translate-y-[-4px]"
                 >
-                  <div className="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                    <contact.icon className="w-6 h-6" />
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full bg-slate-900 text-white flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                    <contact.icon className="w-5 sm:w-6 h-5 sm:h-6" />
                   </div>
-                  <h3 className="text-lg font-light text-slate-900 mb-3 tracking-tight">
+                  <h3 className="text-base sm:text-lg font-light text-slate-900 mb-2 sm:mb-3 tracking-tight">
                     {contact.label}
                   </h3>
-                  <p className="text-slate-700 font-light text-base group-hover:text-slate-900 transition-colors duration-300">
+                  <p className="text-sm sm:text-base text-slate-700 font-light group-hover:text-slate-900 transition-colors duration-300">
                     {contact.value}
                   </p>
                 </a>

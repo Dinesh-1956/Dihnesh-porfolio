@@ -7,9 +7,9 @@ export default function Header() {
         {/* Logo and Name */}
         <div className="flex flex-col">
           <Link to="/" className="text-xl font-bold text-gray-900 hover:text-gray-700 transition">
-            Mohammed Shahzaman Ali
+            V. Dinesh
           </Link>
-          <span className="text-sm text-gray-600 font-medium">Full-Stack Developer</span>
+          <span className="text-sm text-gray-600 font-medium">Electronics & VLSI Engineer</span>
         </div>
 
         {/* Navigation */}

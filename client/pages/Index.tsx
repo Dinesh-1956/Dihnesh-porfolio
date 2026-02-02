@@ -231,7 +231,7 @@ export default function Index() {
                 </p>
               </div>
               <h2 className="font-light text-5xl sm:text-6xl lg:text-7xl text-slate-900 leading-tight tracking-tight">
-                Innovative Full Stack Developer
+                Electronics & VLSI Enthusiast
               </h2>
             </div>
           </ScrollReveal>

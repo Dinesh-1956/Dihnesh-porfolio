@@ -239,16 +239,16 @@ export default function Index() {
           <ScrollReveal direction="up" delay={150}>
             <div className="mt-16 space-y-6 max-w-3xl">
               <p className="text-lg text-slate-700 leading-relaxed font-light">
-                My work spans the MERN stack, AI agents, and automation pipelines—focused on turning ideas into production-ready software. I design systems with scalability, security, and real-world constraints in mind.
+                I'm an Electronics and Communication Engineering student with strong academic foundation and practical exposure to hardware systems, digital electronics, and VLSI concepts. My focus is on designing innovative electronics solutions that solve real-world problems.
               </p>
               <p className="text-lg text-slate-700 leading-relaxed font-light">
-                I enjoy working on problems where architecture matters: integrating AI into workflows, building end-to-end platforms, and designing systems that continue to work as usage grows.
+                I have hands-on experience with circuit design, microcontroller programming, and hardware implementation. My internship at Sushanth Engineers provided me with industry-grade exposure to professional workflows and hardware-level problem solving.
               </p>
               <p className="text-lg text-slate-700 leading-relaxed font-light">
-                My goal is simple: build software that actually gets used.
+                My passion lies in developing systems where both hardware and software engineering matter—from smart temperature regulation to anti-theft security systems.
               </p>
               <p className="text-base text-slate-600 pt-6 font-light">
-                B.Tech in Electronics & Communication Engineering (2023-27)
+                B.Tech in Electronics & Communication Engineering (2023-27, CGPA: 7.2) • Hyderabad, Telangana
               </p>
             </div>
           </ScrollReveal>

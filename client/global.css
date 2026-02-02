@@ -176,16 +176,38 @@
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+  0% {
+    transform: translateY(0px) translateX(0px) rotateZ(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) translateX(3px) rotateZ(0.5deg) scale(1.01);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px) translateX(0px) rotateZ(0deg) scale(1.02);
+  }
+  75% {
+    transform: translateY(-12px) translateX(-4px) rotateZ(-0.5deg) scale(1.01);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotateZ(0deg) scale(1);
+  }
+}
+
+@keyframes floatAlt {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-25px) scale(1.02);
+    opacity: 0.98;
   }
 }
 
 @keyframes glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   }
   50% {
@@ -215,7 +237,11 @@
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-float-alt {
+  animation: floatAlt 4.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
 }
 
 .animate-glow {

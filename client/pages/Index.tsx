@@ -242,13 +242,13 @@ export default function Index() {
                 designing innovative electronics solutions that solve real-world
                 problems.
               </p>
-              <p className="text-lg text-slate-700 leading-relaxed font-light">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-light">
                 I have hands-on experience with circuit design, microcontroller
                 programming, and hardware implementation. My internship at
                 Sushanth Engineers provided me with industry-grade exposure to
                 professional workflows and hardware-level problem solving.
               </p>
-              <p className="text-lg text-slate-700 leading-relaxed font-light">
+              <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-light">
                 My passion lies in developing systems where both hardware and
                 software engineering matter—from smart temperature regulation to
                 anti-theft security systems.

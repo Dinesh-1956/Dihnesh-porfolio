@@ -415,10 +415,10 @@ export default function Index() {
                 Connect
               </p>
               <h2 className="font-light text-5xl sm:text-6xl lg:text-7xl text-slate-900 leading-tight tracking-tight">
-                Let's work together
+                Get in touch
               </h2>
               <p className="text-lg text-slate-600 mt-6 font-light max-w-2xl">
-                Always open to meaningful projects and collaborations. Typically respond within 24–48 hours.
+                Always open to collaborations and opportunities in electronics and VLSI. Reach out to connect!
               </p>
             </div>
           </ScrollReveal>

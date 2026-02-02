@@ -135,8 +135,8 @@ export default function Index() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 blur-2xl opacity-50" />
                   <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border border-white/50">
                     <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F53e4fd32dd724f51a2e513f718e61215%2F54c33f5a4c584ef790818afca0c399bb?format=webp&width=800&height=1200"
-                      alt="Mohammed Shahzaman Ali"
+                      src="https://cdn.builder.io/api/v1/image/assets%2Ff11b34f0fc244da89705edac23c5f473%2Fb83664de3c4c483daf04a715fb1cd657?format=webp&width=800&height=1200"
+                      alt="V. Dinesh"
                       className="w-full h-full object-cover"
                     />
                   </div>

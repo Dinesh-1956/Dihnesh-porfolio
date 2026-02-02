@@ -153,10 +153,10 @@ export default function Index() {
               <div className="space-y-6 lg:space-y-8">
                 <div className="space-y-4 lg:space-y-6">
                   <p className="text-xs font-semibold text-slate-500 tracking-widest uppercase">
-                    Full-Stack Developer
+                    Electronics & VLSI Engineer
                   </p>
                   <h1 className="font-light tracking-tight text-4xl sm:text-5xl lg:text-7xl text-slate-900 leading-tight">
-                    Mohammed<br />Shahzaman<br />Ali
+                    V.<br />Dinesh
                   </h1>
                 </div>
 
